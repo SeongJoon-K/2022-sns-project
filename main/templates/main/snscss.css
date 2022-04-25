@@ -142,9 +142,16 @@ main table {
     height: 50px;
 }
 ul{
-    display: table;
+  display: table;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
 }
-  
+article {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+article span {
+  font-size: 40px;
+}
