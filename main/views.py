@@ -7,5 +7,5 @@ def showmain(request):
     return render(request, 'main/mainpage.html')
 
 
-def intro(myself):
-    return render(myself, 'main/show.html')
+def intro(request):
+    return render(request, 'main/show.html')
