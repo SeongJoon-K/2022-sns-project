@@ -57,7 +57,7 @@ ROOT_URLCONF = 'sns_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'basic', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +126,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'portfolio', 'static')
+    os.path.join(BASE_DIR, 'mainpage', 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
