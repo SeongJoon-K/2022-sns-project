@@ -27,8 +27,6 @@ main {
     flex-grow: 1;
     position: relative;
     width: 100%;
-    height: 700;
-    max-width: 935px;
     justify-content: center;
     margin: auto;
 }

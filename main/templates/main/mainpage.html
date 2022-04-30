@@ -1,11 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<!DOCTYPE html>
-
-<html lang="en">
-<body>
-
-    
     <main>
         <h2>블로그형 SNS 입니다.</h2>
         <table class="table">
@@ -42,9 +37,9 @@
     </article>
     <div class="icon">
         <ul class="gnb01 clearfixed">
-            <li><a href="https://www.instagram.com/charm_0ne/"><img class="insta" src="{% static 'images/insta.jpeg' %}"></a></li>
-            <li><a href="https://github.com/SeongJoon-K"><img class="insta" src="{% static 'images/githu.png' %}"></a></li>
-            <li><a href="https://blog.naver.com/jobcho6320"><img class="insta" src="{% static 'images/blog.png' %}"></a></li>
+            <li><a href="https://www.instagram.com/charm_0ne/"><img class="insta" width="50px" height="50px" src="{% static 'images/insta.jpeg' %}"></a></li>
+            <li><a href="https://github.com/SeongJoon-K"><img class="insta" width="50px" height="50px"  src="{% static 'images/githu.png' %}"></a></li>
+            <li><a href="https://blog.naver.com/jobcho6320"><img class="insta" width="50px" height="50px"  src="{% static 'images/blog.png' %}"></a></li>
         </ul>
     </div>
     <footer>
