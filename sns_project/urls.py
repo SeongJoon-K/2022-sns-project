@@ -23,6 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.showmain, name="showmain"),
     path('intro/', views.intro, name="intro"),
+    path('<str:id>', views.detail, name="detail"),
+    path('new', views.new, name="new"),
+    path('create', views.create, name="create"),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
