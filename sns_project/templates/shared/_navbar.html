@@ -1,25 +1,26 @@
 {% load static %}
-{% block content %}
 
     <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand">SNS</a>
-
+      <li class="nav-item dropdown">
          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           {% if user.is_authenticated %}
+          ㅇㅇㅇ
+          <!-- 로그인시 보이는 화면 -->
           <li><a class="dropdown-item" href="{% url 'account_logout' %}">로그아웃</a></li>
-          <li><a class="dropdown-item" href="#">Mypage</a></li>
+          <li><a class="dropdown-item" href="{% url 'users:mypage' %}">Mypage</a></li>
           {% else %}
+          <!-- 로그아웃시 보이는 화면 -->
           <li><a class="dropdown-item" href="{% url 'account_login' %}">로그인</a></li>
           <li><a class="dropdown-item" href="{% url 'account_signup' %}">회원가입</a></li>
+
           {% endif %}
          </ul>
-         </li>
-      <form class="d-flex">
+        </li>
+         <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
-         
   </nav>
-  {% endblock %}
