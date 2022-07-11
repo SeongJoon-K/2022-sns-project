@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+
+* {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+    position: fixed;
+    top: 0;
+    padding: 20px;
+}
+nav span {
+    width: 500px;
+    align-items: center;
+    font-size: 40px;
+    margin: 0;
+}
+nav form {
+    display: inline;
+}
+main {
+    padding-top: 30px;
+    flex-grow: 1;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+main h2 {
+    margin-bottom: 50px;
+}
+main table {
+    
+}
+
+
+
+
+/* 이전 자기소개 파일 css */
+.container {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 4%;
+    margin-bottom: 10%;
+  }
+  #hi {
+    font-size: 40px;
+  }
+  .header {
+    vertical-align: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Noto Serif KR', serif;
+  }
+  
+  .profile {
+    height: 320px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 300px;
+    border-radius: 100%;      
+  }
+  #content {
+    font-weight: 400px;
+    font-size: large;
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+  }
+  
+  #accordionExample {
+    width: 500px;
+    height: 300px;
+    display: inline-block;
+  }
+  .birth {
+    font-family: 'Noto Serif KR', serif;
+  
+  }
+  hr {
+    width: 300px;
+    display: inline-block;
+  }
+  input {
+    height: 30px;
+    width: 65px;
+  }
+  button {
+    height: 30px;
+}
+  #btn {
+    width: 93px;
+    height: 28px;
+  }
+  .scroll-container{
+    display: block;
+    text-align:center;
+    margin:auto;
+    width: 350px;
+    height: 250px;
+  }
+  #MBTI {
+    margin-top: 200px;
+  }
+  #insta {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #1e1e1e;
+    margin-top: 200px;
+    padding: 20px;
+    font-size: 12px;
+    color: #919191;
+    width: 100%;
+    position:fixed;
+}
+.gnb01 li {
+    float: left;list-style: none;margin: 0 5px
+}
+.clearfixed::after {
+    display: block;content: "";clear: both;
+}
+
+.insta_btn a, .faceb_btn a{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    text-indent: -9999px; /*글씨를 안보이게 한다*/
+}
+.insta, .git {
+    width: 50px;
+    height: 50px;
+}
+ul{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+article {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+article span {
+  font-size: 40px;
+}

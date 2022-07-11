@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+* {margin: 0; padding: 0;}
+      header {width: 100%; text-align: center; height: 50px; position: fixed;}
+      b {display: inline-block; margin-left: 50px; margin-top: 20px; cursor: pointer;}
+      div {width: 100vw; height: 100vh;}
+
+.container {
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 4%;
+  margin-bottom: 10%;
+}
+#hi {
+  font-size: 40px;
+}
+.header {
+  vertical-align: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Noto Serif KR', serif;
+}
+
+.profile {
+  height: 400px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+}
+img {
+  height: 400px;
+
+
+}
+#content {
+  font-weight: 400px;
+  font-size: large;
+  font-family: 'Noto Serif KR', serif;
+  text-align: center;
+}
+
+#accordionExample {
+  width: 500px;
+  height: 300px;
+  display: inline-block;
+}
+.birth {
+  font-family: 'Noto Serif KR', serif;
+
+}
+hr {
+  width: 300px;
+  display: inline-block;
+}
+input {
+  height: 50px;
+  width: 65px;
+}
+#btn {
+  width: 93px;
+  height: 28px;
+}
+.scroll-container{
+  display: block;
+  text-align:center;
+  margin:auto;
+  width: 350px;
+  height: 250px;
+}
+#MBTI {
+  margin-top: 200px;
+}
+#insta {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
