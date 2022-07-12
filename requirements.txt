@@ -16,3 +16,32 @@ requests==2.27.1
 requests-oauthlib==1.3.1
 sqlparse==0.4.2
 urllib3==1.26.9
+
+
+# [uwsgi]
+# chdir=/home/ubuntu/2022-sns-project
+# module=sns_project.wsgi:application 
+# master=True
+# pidfile=/tmp/project-master.pid
+# vacuum=True
+# max-requests=5000 
+# daemonize=/home/ubuntu/2022-sns-project/Django.log 
+# home=/home/ubuntu/2022-sns-project/venv 
+# virtualenv=/home/ubuntu/2022-sns-project/venv 
+# socket=/home/ubuntu/2022-sns-project/uwsgi.sock 
+# chmod-socket=666
+
+# location / {
+#     # try_files 삭제
+#     include /etc/nginx/uwsgi_params; 
+#     uwsgi_pass django;
+# }
+# # static 경로 설정
+# # alias는 별칭(단축키)를 의미 
+# location /static/ {
+#     alias /home/ubuntu/2022-sns-project/static/;
+# }
+# # media 경로 설정 
+# location /media/ {
+#     alias /home/ubuntu/2022-sns-project/media/;
+# }
