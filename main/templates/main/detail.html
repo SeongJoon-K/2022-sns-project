@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-
 <h1>{{post.title}}</h1>
 
 {% if post.writer %} {% if 'user' in post.writer.username %}
@@ -13,6 +12,7 @@
 <h3>작성자 : 알 수 없음</h3>
 {% endif %} 날짜 : {{post.pub_date}}
 <hr />
+
 {% if post.image %}
 <p><img src="{{post.image.url}}" alt="사진" /></p>
 {% endif %}
@@ -27,16 +27,31 @@
 <div>
   {% for comment in comments %}
   <div>
-    작성자 : {{comment.writer}} {{comment.content}}
+    작성자 : {{comment.writer}} 댓글 : {{comment.content}}
+    <a href="{% url 'delete_comment' post.id comment.id %}">삭제</a>
     <br />
     <hr />
   </div>
+
   {% endfor %}
 </div>
+
+{% for comment in comments %}
+<div class="media mb-4">
+  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""/>
+  <div class="media-body">
+    <h5 class="mt-0">anonymous</h5>
+    {{comment}}
+    <div>
+      <a href="{%url 'delete_comment' post.id comment.id %}" class="btn btn-primary my-2">Delete</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
 
 <a href="{% url 'main:edit' post.id %}">수정하기</a>
 <a href="{% url 'main:delete' post.id %}">삭제하기</a>
 <br /><br />
 <hr />
-<h5><a href="{% url 'main:posts' %}">목록</a></h5>
+<h5><a href="{% url 'main:showmain' %}">목록</a></h5>
 {% endblock %}

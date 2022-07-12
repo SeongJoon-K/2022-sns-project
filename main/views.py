@@ -64,3 +64,10 @@ def create_comment(request, post_id):
     new_comment.post = get_object_or_404(Post, pk=post_id)
     new_comment.save()
     return redirect('main:detail', post_id)
+
+# 댓글 delete 구현
+def delete_comment(request, post_id, comment_id):
+    comment = Comment.objects.get(pk=comment_id)
+    comment.delete()
+
+    return redirect('/'+str(post_id))

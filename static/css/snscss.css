@@ -4,24 +4,30 @@
     font-family: 'Nanum Myeongjo', serif;
 }
 
-nav {
-    height: 60px;
-    width: 100%;
-    background-color: rgba(var(--d87,255,255,255),1);
-    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
-    position: fixed;
-    top: 0;
-    padding: 20px;
+body {
+  margin: 0;
 }
-nav span {
-    width: 500px;
-    align-items: center;
-    font-size: 40px;
-    margin: 0;
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: darkslategray;
+  list-style-type: none;
 }
-nav form {
-    display: inline;
+
+.nav-item {
+  padding: 15px;
+  cursor: pointer;
 }
+.nav-item a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
 main {
     padding-top: 30px;
     flex-grow: 1;
