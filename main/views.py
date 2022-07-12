@@ -63,6 +63,7 @@ def create_comment(request, post_id):
     new_comment.content = request.POST['content']
     new_comment.post = get_object_or_404(Post, pk=post_id)
     new_comment.save()
+
     return redirect('main:detail', post_id)
 
 # 댓글 delete 구현
@@ -71,3 +72,16 @@ def delete_comment(request, post_id, comment_id):
     comment.delete()
 
     return redirect('/'+str(post_id))
+
+def update_comment(request, post_id, comment_id):
+    post = get_object_or_404(Post, pk=post_id)
+    comment = get_object_or_404(Comment, id=comment_id)
+
+    if request.method == 'POST':
+        post_id = comment.post.id
+        comment.content = request.POST.get('content')
+        comment.save()
+        return redirect('main:detail', post_id)
+    
+    else:
+        return render(request, 'main/update_comment.html', {'post':post, 'comment':comment})
