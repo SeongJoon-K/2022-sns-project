@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 
-<h1>{{post.title}}</h1>
+<h1 class="post-head">{{post.title}}</h1>
 
 {% if post.writer %} {% if 'user' in post.writer.username %}
 
@@ -14,7 +14,7 @@
 <hr />
 
 {% if post.image %}
-<p><img src="{{post.image.url}}" alt="사진" /></p>
+<p><img src="{{post.image.url}}" alt="사진"/></p>
 {% endif %}
 <p>{{post.body}}</p>
 <div>

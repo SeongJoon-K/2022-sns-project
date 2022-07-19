@@ -22,20 +22,5 @@
     <button type="submit">수정</button>
   </form>
 </div>
-
-
-<!-- {% for comment in comments %}
-<div class="media mb-4">
-  <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""/>
-  <div class="media-body">
-    <h5 class="mt-0">anonymous</h5>
-    {{comment}}
-    <div>
-      <a href="{%url 'main:delete_comment' post.id comment.id %}" class="btn btn-primary my-2">Delete</a>
-    </div>
-  </div>
-</div>
-{% endfor %} -->
-
 <h5><a href="{% url 'main:showmain' %}">목록</a></h5>
 {% endblock %}

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
 
 * {
-    font-family: 'Nanum Myeongjo', serif;
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
 }
 
 nav {
@@ -23,7 +23,7 @@ nav form {
     display: inline;
 }
 main {
-    padding-top: 30px;
+    padding-top: 30px;ㅈ
     flex-grow: 1;
     position: relative;
     width: 100%;
@@ -59,11 +59,11 @@ main table {
   }
   
   .profile {
-    height: 320px;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 300px;
-    border-radius: 100%;      
+    text-align: center;
+   
+  }
+  .profile-image {
+    width : 300px;
   }
   #content {
     font-weight: 400px;
@@ -197,7 +197,9 @@ main table {
   
 }
 
-
+post-head {
+  margin: auto;
+}
 
 
 /* 이전 자기소개 파일 css */
