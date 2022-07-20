@@ -16,14 +16,14 @@
             </thead>
             {% for post in posts %}
             <tr>
-                <td><a href="{% url 'main:detail' post.id %}">{{post.title}}</a></td>
+                <td><a href="{% url 'main:detail' post.id %}" style="text-decoration:none; color:black">{{post.title}}</a></td>
                 <td>{{post.writer}}</td>
                 <td>{{post.pub_date}}</td>
             </tr>
             {% endfor %}
         </table>
         <div class="post-title">
-            <button><a id="post-title" href="{% url 'main:new' %}">글쓰기</a></button>
+            <a id="post-title" href="{% url 'main:new' %}" style="text-decoration:none; color:white" class="btn btn-primary">글쓰기</a>
         </div>
         {% else %}
         {% endif %}
@@ -43,8 +43,8 @@
 
         <!-- 페이지가 다음 페이지를 갖고 있다면 -->
         {% if posts.has_next %} 
-        <a href="?page={{posts.next_page_number}}">다음 페이지</a>
-        <a href="?page={{posts.paginator.num_pages}}">마지막 페이지</a>
+        <a href="?page={{posts.next_page_number}}" style="text-decoration:none; color:black">다음 페이지</a>
+        <a href="?page={{posts.paginator.num_pages}} " style="text-decoration:none; color:black">마지막 페이지</a>
         {% endif %}
         <br><br>
         <span>About me<a class="num" href="{% url 'main:intro' %}">🧑🏻‍💻</a></span>
