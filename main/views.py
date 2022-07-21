@@ -9,7 +9,7 @@ from django.core.paginator import Paginator
 
 def showmain(request):
     posts = Post.objects.all()
-    paginator = Paginator(posts,2) # 객체들의 목록을 끊어줄거다, 몇개까지
+    paginator = Paginator(posts,5) # 객체들의 목록을 끊어줄거다, 몇개까지
     pagnum = request.GET.get('page') # 페이지에 해당하는 밸류의 키값을 반환하기 위해서 GET 요청을 함
     posts = paginator.get_page(pagnum) # 페이지네이터에서 짜른 객체가 posts에 요청이 갈꺼고, 담길것임
     return render(request, 'main/mainpage.html', {'posts': posts})

@@ -8,10 +8,11 @@
 
 {% else %}
 <h3>작성자 : {{ post.writer }}</h3>
-{% endif %} {% else %}
+{% endif %} 
+
+{% else %}
 <h3>작성자 : 알 수 없음</h3>
 {% endif %} 날짜 : {{post.pub_date}}
-<hr />
 
 {% if post.image %}
 <p><img src="{{post.image.url}}" alt="사진"/></p>
@@ -21,28 +22,33 @@
 <a href="{% url 'main:edit' post.id %}">수정하기</a>
 <a href="{% url 'main:delete' post.id %}">삭제하기</a>
 {% endif %}
-<br><br>
+
 <hr>
 
 
 <div>
   <form action="{%url 'main:create_comment' post.id%}" method="POST">
     {%csrf_token%}
-    <textarea name="content" placeholder="댓글내용입력"></textarea>
-    <input type="submit" value="확인" />
+    <div class="form-floating">
+      <textarea class="form-control" placeholder="댓글 입력" id="floatingTextarea" name="content"></textarea>
+      <label for="floatingTextarea">Comments</label>
+    </div>
+    <input type="submit" value="확인" class="btn btn-primary">
   </form>
 </div>
 
 <br>
+
 <div>
   {% for comment in comments %}
   <div>
     이름 {{comment.writer}} <br>
     내용 {{comment.content}}
+    
     {% if comment.writer == user %}
     <br>
-    <a href="{% url 'main:delete_comment' post.id comment.id %}">삭제</a>
-    <a href="{% url 'main:update_comment' post.id comment.id %}">수정</a>
+    <a href="{% url 'main:delete_comment' post.id comment.id %}" class="btn btn-primary">삭제</a>
+    <a href="{% url 'main:update_comment' post.id comment.id %}" class="btn btn-primary">수정</a>
     <br />
     <hr />
   </div>
@@ -51,5 +57,5 @@
   {% endfor %}
 </div>
 <br><br><br><br>
-<h5><a href="{% url 'main:showmain' %}">목록</a></h5>
+<h5><a href="{% url 'main:showmain' %}" class="btn btn-primary">목록</a></h5>
 {% endblock %}

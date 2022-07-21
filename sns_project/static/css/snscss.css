@@ -30,6 +30,7 @@ main {
     justify-content: center;
     margin: auto;
 }
+
 main h2 {
     margin-bottom: 50px;
 }
@@ -314,4 +315,8 @@ margin-top: 30px;
 }
 article span {
 font-size: 40px;
+}
+
+.post-title {
+  margin: 40px;
 }
